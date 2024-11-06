@@ -3,31 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM LEARNING</title>
-    <style>
-        .bg-black{
-            background-color: #212121;
-            color: #fff;
-        }
-    </style>
+    <title>HTML</title>
 </head>
-<body class="bg-black">
-    <div >
-        <h1 id= "title" class="heading">Dom learning on Self study <span style="display: none;">test text</span></h1>
-        <p>Lorem ipsum dolor sit amet </p>
-        <h2>Lorem ipsum tetur adipiiquam .</h2>
-        <h2>Lorem ipsum tetur adipiiquam .</h2>
-        <p>I'm better than you</p>
-        <input type="password">
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+    <ul id = "images">   
+        <li><img width="200px" id="lion" src="https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg" alt="lion"></li>  
+        <li><img width="200px" id="mountain" src="https://cdn.mos.cms.futurecdn.net/xaycNDmeyxpHDrPqU6LmaD.jpg" alt="mountain"></li>   
+        <li><img width="200px" id="river" src="https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1638892070/EducationHub/photos/grand-canyon-colorado-river.jpg" alt="mountain"></li>   
+        <li><img width="200px" id="cat" src="https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg" alt="mountain"></li>  
+        <li><a style="color: aliceblue;" href="https://www.google.com/" id="google">Google</a></li> 
+        
 
-        <ul>
-            <li class="list-item">one</li>
-            <li class="list-item">Two</li>
-            <li class="list-item">Three</li>
-            <li class="list-item">Four</li>
         </ul> 
     </div>
-
-   
 </body>
+<script>
+    // document.getElementById('cat').onclick = function(){
+    //     alert("cat clicked")
+    // }
+
+      //attachEvent
+    // jquery
+
+       //type, timestamp, defaultPrevented
+    //target. toElement, srcElement, currentTarget
+    //clinetX, clientY, screenX, screenY
+    //altKey, ctrlKey, shiftKey, keycode
+
+    
+    // document.getElementById('images').addEventListener('click', function(e){
+    // console.log("clicked inside the ul");
+    // }, false) 
+
+    // document.getElementById('cat').addEventListener('click', function(e){
+    //     console.log("cat clicked ");
+    //     e.stopPropagation();
+    // }, false)
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault(); 
+    //     console.log("google clicked")
+    //    e.stopPropagation();
+    // },false)
+
+    document.querySelector("#images").addEventListener('click', function(e){
+        console.log(e.target.parentNode);
+        let removeIt = e.target.parentNode
+         removeIt.remove();
+    },false)
+
+    if(e.target.tagName === 'IMg'){
+      console.log(e.target.id);
+      let removeIt = e.target.parentNode
+     removeIt.parentNode.removeChild(removeIt);  
+            removeIt.remove();
+        }
+  
+</script>
 </html>
