@@ -1,64 +1,41 @@
-// if
+// for
 
-const temperature = 41
-
-// if(temperature === 40){
-//     console.log("less than 50")
-// } else{
-//     console.log("temperature greater than 50")
-
-// }
-
-if(2 !== "2"){
-    // console.log("executed");
+for (let i = 0; i <= 10; i++) {
+    const element = i;
+    if (element == 5) {
+        console.log("5 is the best number")
+    }
+    console.log(element);
+    
 }
-// console.log("Not executed")
-
-const score = 200
-
-if(score > 100){
-    const power = "fly"
-    // console.log(`user power : ${power}`)
-
-}
+// console.log(element);
 
 
-// < = greater than
-// > = less than
-// <= = less or equal
-// >= = greater or equal
-// = = single operater (operater assignment)
-// == --> eqaul
-// != --> not equal
-// === --> check the type and condition
-// !== --> check the type and condition
-
-// const balance = 1000
-
-// if(balance > 500) console.log("test 1") , console.log("test 2")  wrong the code
-
-// if (balance < 500){
-//     console.log("less than 500")
-// } else if(balance < 750){
-//     console.log("less than 750")
-// } else if(balance < 900){
-//     console.log("less than 900")
-// } else{
-//     console.log("less than 1200")
-// }
-
-const userLoggedIn = true
-const debitCard = true
-const LoggedInGoogle = false
-const LoggedInEmail = true
-
-if(userLoggedIn && debitCard){
-    console.log("Allow the buy course");
-} else{
-    console.log("Not buy course");
+for (let i = 1; i < 10; i++) {
+    // console.log(`outer loop value : ${i}`); 
+        for (let j = 1; j < 11; j++) {
+            // console.log(`inner loop value : ${j} and inner loop  ${i}`)
+        // console.log(i + '*' + j + ' = ' + i*j);
+            
+        }
+    
 }
 
-if(LoggedInGoogle || LoggedInEmail){
-    console.log("Allow the access course");
+const myArray = ["superman", "ironman", "batman"]
+console.log(myArray.length)
+
+for (let index = 0; index < myArray.length; index++) {
+    const element = myArray[index];
+    // console.log(element); 
+    
+}
+
+for (let index = 1; index  <= 20; index++) {
+    if (index == 5) {
+        console.log(`Detected 5`);
+        continue
+    }
+    console.log(`value of i is : ${index}`)
+    
 }
 
